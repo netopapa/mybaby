@@ -65,6 +65,8 @@
 
         $("#sub").click(function(event) {
             var resp = $("input[name='resp']").val();
+            resp = trim(resp);
+            resp.replace(' ', '');
             if (resp == 'vida') {
                 $("#quest").css('display', 'none');
                 $("#theend").css('display', 'flex');
