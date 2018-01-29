@@ -65,6 +65,7 @@
 
         $("#sub").click(function(event) {
             var resp = $("input[name='resp']").val();
+            resp = resp.replace( /\s/g, '' );
             resp = resp.toLowerCase();
             console.log(resp);
             if (resp == 'vida') {
