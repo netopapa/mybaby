@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<title>N&K ♥</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>N&K ♥</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
+
 <body>
-	<div id="quest">
-		<div class="form-group">
-			<label>Você é minha:</label>
-			<input type="text" name="resp">
-		</div>
-		<span class="feed">tente novamente</span>
-		<button class="submit btn" id="sub">OK</button>
-	</div>
-	<div id="theend">
-		<img id="img" src="">
-	</div>
+    <div id="quest">
+        <div class="form-group">
+            <label>Você é minha:</label>
+            <input type="text" name="resp">
+        </div>
+        <span class="feed">tente novamente</span>
+        <button class="submit btn" id="sub">OK</button>
+    </div>
+    <div id="theend">
+        <img id="img" src="">
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-	$("#sub").click(function(event) {
-		var resp = $("input[name='resp']").val();
-		if(resp == 'vida') {
-			var n = Math.floor((Math.random() * 10) + 1);
-			switch(n){
-				case 1:
-					$("img#img").attr('src', 'https://media.giphy.com/media/gbDsm8Hn7aIuc/giphy.gif');
-					break;
-				case 2:
-					$("img#img").attr('src', 'https://media.giphy.com/media/l1IBiCKmfD2bRmHcI/giphy.gif');
-					break;
-				case 1:
-					$("img#img").attr('src', 'https://media.giphy.com/media/jIL3lq9Ah00tG/giphy.gif');
-					break;
-				case 3:
-					$("img#img").attr('src', 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif');
-					break;
-				case 4:
-					$("img#img").attr('src', 'https://media.giphy.com/media/zVdN0K0u9MLNm/giphy.gif');
-					break;
-				case 5:
-					$("img#img").attr('src', 'https://media.giphy.com/media/jQqU9dCKUOdri/giphy.gif');
-					break;
-				case 6:
-					$("img#img").attr('src', 'http://media.giphy.com/media/1S9kD6xm4601O/giphy.gif');
-					break;
-				case 7:
-					$("img#img").attr('src', 'https://media.giphy.com/media/rVXEXEzJm3r8Y/giphy.gif');
-					break;
-				case 8:
-					$("img#img").attr('src', 'https://media.giphy.com/media/t0joacrE6RgOI/giphy.gif');
-					break;
-				case 9:
-					$("img#img").attr('src', 'https://media.giphy.com/media/GR9fVPF7xWXAY/giphy.gif');
-					break;
-				default:
-					$("img#img").attr('src', 'http://media.giphy.com/media/42YlR8u9gV5Cw/giphy.gif');
-					break;
-			}
-		$("#quest").css('display', 'none');
-		$("#theend").css('display', 'flex');
-		setTimeout(function(){
-			location.reload();
-		}, 5000);
-		}else{
-			$(".feed").addClass('show');
-			setTimeout(function(){
-				$(".feed").removeClass('show');
-			}, 2500);
-		}
-	});
+    $(document).ready(function() {
+        var n = Math.floor((Math.random() * 10) + 1);
+        switch (n) {
+            case 1:
+                $("img#img").attr('src', 'https://media.giphy.com/media/gbDsm8Hn7aIuc/giphy.gif');
+                break;
+            case 2:
+                $("img#img").attr('src', 'https://media.giphy.com/media/l1IBiCKmfD2bRmHcI/giphy.gif');
+                break;
+            case 1:
+                $("img#img").attr('src', 'https://media.giphy.com/media/jIL3lq9Ah00tG/giphy.gif');
+                break;
+            case 3:
+                $("img#img").attr('src', 'https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif');
+                break;
+            case 4:
+                $("img#img").attr('src', 'https://media.giphy.com/media/zVdN0K0u9MLNm/giphy.gif');
+                break;
+            case 5:
+                $("img#img").attr('src', 'https://media.giphy.com/media/jQqU9dCKUOdri/giphy.gif');
+                break;
+            case 6:
+                $("img#img").attr('src', 'http://media.giphy.com/media/1S9kD6xm4601O/giphy.gif');
+                break;
+            case 7:
+                $("img#img").attr('src', 'https://media.giphy.com/media/rVXEXEzJm3r8Y/giphy.gif');
+                break;
+            case 8:
+                $("img#img").attr('src', 'https://media.giphy.com/media/t0joacrE6RgOI/giphy.gif');
+                break;
+            case 9:
+                $("img#img").attr('src', 'https://media.giphy.com/media/GR9fVPF7xWXAY/giphy.gif');
+                break;
+            default:
+                $("img#img").attr('src', 'http://media.giphy.com/media/42YlR8u9gV5Cw/giphy.gif');
+                break;
+        }
+
+        $("#sub").click(function(event) {
+            var resp = $("input[name='resp']").val();
+            if (resp == 'vida') {
+                $("#quest").css('display', 'none');
+                $("#theend").css('display', 'flex');
+                setTimeout(function() {
+                    location.reload();
+                }, 5000);
+            } else {
+                $(".feed").addClass('show');
+                setTimeout(function() {
+                    $(".feed").removeClass('show');
+                }, 2500);
+            }
+        });
+    });
 </script>
+
 </html>
